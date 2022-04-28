@@ -1,22 +1,30 @@
 # Express.js: Note Taker
 
-## Your Task
+# Table of Contents
+  * Description
+  * Installation
+  * User Story
+  * Video Walkthrough
+  * Screenshots
+  * License
+  * Questions
+  * Submission
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+# Description
+This note-taking application called Note Taker allows the user to:
+    * Write and save notes using an Express.js back-end
+    * Save and retrieve note data from a JSON file
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+The application’s front-end has already been created. The app's back-end was built, connected to the front-end, and deployed to Heroku.
 
-
-## User Story
-
+# User Story
 ```
 AS A small business owner
 I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ```
 
-
-## Acceptance Criteria
+# Acceptance Criteria
 
 ```
 GIVEN a note-taking application
@@ -33,19 +41,6 @@ THEN that note appears in the right-hand column
 WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
-
-
-## Mock-Up
-
-The following images show the web application's appearance and functionality:
-
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
-
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
-
-
-## Getting Started
-
 On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
 
 The following HTML routes should be created:
@@ -60,27 +55,32 @@ The following API routes should be created:
 
 * `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
 
-
-## Bonus
-
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
+As a bonus, the DELETE route to the application was added using the following guideline:
 
 * `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
+# Video Walkthrough
+![Video Walkthrough](./Assets/11-express-homework-demo-01.png)
 
-## Grading Requirements
+# Screenshots
+![App Screenshot](./Assets/11-express-homework-demo-01.png)
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+# Technologies Used
+JavaScript
+NPM
+Node.js
+Express.js
+Heroku
 
-This homework is graded based on the following criteria: 
+# Questions
+If you have any questions, please send them to my GitHub profile
+
+# Submission
+Link to GitHub repository: https://github.com/jchoe125/Professional-README-Generator
+
+
+
+
 
 
 ### Technical Acceptance Criteria: 40%
@@ -104,28 +104,6 @@ This homework is graded based on the following criteria:
 
 * GitHub repository contains application code.
 
-
-### Application Quality: 11%
-
-* Application console is free of errors.
-
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-### Bonus: +10 Points
-
-* Application allows users to delete notes.
 
 
 ## Review

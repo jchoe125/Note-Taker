@@ -1,7 +1,7 @@
 const express = require('express')
 const fs = require('fs');
 const path = require('path');
-const { v4: uuidv4 } = require('uuid'); //importing uuid package
+const uuid = require('uuid'); //importing uuid package
 const notesDb = require('./db/db.json');
 
 //setting variables for app to start server and listen on port 3000 for connections
@@ -36,39 +36,30 @@ app.get('/notes', (req, res) => {
 
 //API routes
 //GET route for retrieving notes and returning saved notes as JSON
-app.get("/api/notes", function(req, res) {
-    // Read the db.json file and return all saved notes as JSON
-    res.json(notesDb);
+app.get("/api/notes", (req, res) => {
+    fs.readFile(path.join(__dirname, "./db/db.json"), (err, data) => {
+        if (err) throw err;
+        const notes = JSON.parse(data);
+        res.json(notes);
+    })
 });
 
 //POST route to receive new note to save on the request body
-app.post('api/notes', (req, res) => {
-    fs.readFile(path.join(__dirname + "/db/db.json"), function(err, object) {
-        if (err) {
-            console.log(err)
-            return
-        };
+//New Note
+app.post("/api/notes", function(req, res) {
+    fs.readFile(path.join(__dirname, "./db/db.json"), (err, data) => {
+        if (err) throw err;
+        const notes = JSON.parse(data);
+        const newNote = req.body;
+        newNote.id = uuid.v4();
+        notes.push(newNote);
 
-        var notes = JSON.parse(object);
-
-        const newNote = {
-            title: req.body.title,
-            text: req.body.text,
-            id: uuidv4() // unique identifier
-        };
-
-        notes.push(newNote)
-
-        let noteJSON = JSON.stringify(notes)
-        console.log(noteJSON);
-
-        fs.writeFile(path.join(__dirname + "/db/db.json"), noteJSON, (err) => {
-            if (err) {
-                return console.log(err)
-            }
-            return noteJSON
-        })
-    })
+        const createNote = JSON.stringify(notes);
+        fs.writeFile(path.join(__dirname, "./db/db.json"), createNote, (err) => {
+            if (err) throw err;
+        });
+        res.json(newNote);
+    });
 });
 
 //DELETE request

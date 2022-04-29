@@ -1,25 +1,26 @@
 {
-    "name": "note-taker-v2",
-    "version": "1.0.0",
-    "description": "# Table of Contents   * Description   * Installation   * User Story   * Video Walkthrough   * Screenshots   * License   * Questions   * Submission",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jchoe125/note-taker-v2.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/jchoe125/note-taker-v2/issues"
-    },
-    "homepage": "https://github.com/jchoe125/note-taker-v2#readme",
-    "dependencies": {
-        "express": "^4.18.0",
-        "uuid": "^8.3.2"
-    }
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "# Table of Contents   * Description   * Installation   * User Story   * Video Walkthrough   * Screenshots   * License   * Questions   * Submission",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchoe125/Note-Taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchoe125/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/jchoe125/Note-Taker#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
 }

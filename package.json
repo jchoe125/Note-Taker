@@ -1,32 +1,25 @@
 {
-    "name": "note-taker",
+    "name": "note-taker-v2",
     "version": "1.0.0",
-    "description": "Express.js - Homework #11",
+    "description": "# Table of Contents   * Description   * Installation   * User Story   * Video Walkthrough   * Screenshots   * License   * Questions   * Submission",
     "main": "server.js",
     "scripts": {
-        // "test": "echo \"Error: no test specified\" && exit 1",
-        // "start": "node server.js"
-        "dev": "react-scripts start",
-        "start": "serve -s build",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "heroku-postbuild": "npm run build"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jchoe125/Note-Taker.git"
+        "url": "git+https://github.com/jchoe125/note-taker-v2.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/jchoe125/Note-Taker/issues"
+        "url": "https://github.com/jchoe125/note-taker-v2/issues"
     },
-    "homepage": "https://github.com/jchoe125/Note-Taker#readme",
+    "homepage": "https://github.com/jchoe125/note-taker-v2#readme",
     "dependencies": {
         "express": "^4.18.0",
-        "serve": "^13.0.2",
         "uuid": "^8.3.2"
     }
 }

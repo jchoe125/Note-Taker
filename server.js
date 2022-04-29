@@ -20,14 +20,15 @@ app.use(express.urlencoded({ extended: true }));
 //----------------------------------------------------------------
 
 //HTML routes
-//GET route for homepage
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-});
 
 //GET route for notes page when /notes is accessed 
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'))
+});
+
+//GET route for homepage
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 //----------------------------------------------------------------

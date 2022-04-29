@@ -94,16 +94,6 @@ Link to GitHub repository: https://github.com/jchoe125/Professional-README-Gener
   * Application must be deployed to Heroku.
 
 
-### Deployment: 36%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
 
 
 ## Review
@@ -114,5 +104,3 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

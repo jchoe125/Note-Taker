@@ -75,14 +75,14 @@ app.post('api/notes', (req, res) => {
 app.delete("/api/notes/:id", function(req, res) {
     id = req.params.id;
     // Splice method is used to delete note from array
-    db.splice(id - 1, 1);
+    notesDb.splice(id - 1, 1);
     // Reassign id for each note object
-    db.forEach((obj, i) => {
+    notesDb.forEach((obj, i) => {
         obj.id = i + 1;
     });
     // Return remaining notes
-    fs.writeFile("./db/db.json", JSON.stringify(db), function() {
-        res.json(db);
+    fs.writeFile("./db/db.json", JSON.stringify(notesDb), function() {
+        res.json(notesDb);
     });
 });
 
